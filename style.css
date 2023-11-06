@@ -1,0 +1,395 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+    width: 90px; 
+    height: auto;
+}
+.titulo {
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para la lista de enlaces en pantallas grandes */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+/* Estilos para los enlaces */
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo para el enlace "Comprar tickets" con hover */
+.comprar-tickets:hover {
+    background-color: #127d12; 
+    transition: background-color 0.3s; 
+}
+
+/* Estilos para el menú tipo hamburguesa en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Estilos responsivos para dispositivos móviles y tablets */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    ul.active {
+        display: flex;
+    }
+
+    ul li {
+        margin: 10px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.imgportada {
+    width: 100%;
+    height: auto;
+}
+
+/* BOOTSTRAP HERO SECTION */
+header {
+    background-image: url(/assets/ba1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    margin-top: 30%;
+}
+.parrafoHero {
+    padding-left: 50%;
+}
+
+.botonesHero {
+    display: flex;
+    flex-direction:row-reverse;
+    margin-bottom: 10%;
+}
+
+.btnOrador {
+    color: white;
+    margin-right: 1%;
+    background-color: transparent;
+}
+
+
+/* SECCIÓN ORADORES */
+.characters-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+    text-align: left;
+}
+
+.characters-section h2 {
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Estilos para las cards de personajes */
+.character-card {
+    flex-basis: calc(33.33% - 20px); 
+    margin-bottom: 20px;
+    background-color: #f5f5f5bd; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.character-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+/* Estilos para los títulos */
+.character-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos de descripción */
+.character-card p {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:justify;
+}
+
+.btnCards {
+    display: flex;
+    align-items: left;
+}
+
+.btnCards button {
+    margin-right: 5px;
+    font-size: x-small;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+/* RESPONSIVE PARA DIFERENTES PANTALLAS */
+@media (max-width: 950px) {
+    .character-card {
+        flex-basis: calc(50% - 20px); 
+    }
+}
+@media (max-width: 600px) {
+    .character-card {
+        flex-basis: calc(100% - 20px); 
+    }
+
+}
+
+
+/*SECCIÓN PLAYA Y TEXTO*/
+/* Estilos generales para la sección */
+.image-and-article {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.image {
+    flex-basis: 50%;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el artículo */
+.article {
+    flex-basis: 50%; 
+    padding-left: 20px;
+    background-color: #333;
+    color: white;
+    margin-left: 0.25%;
+}
+
+.article h2 {
+    font-size:150%;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 5%;
+}
+
+.article p {
+    font-size: 90%;
+    padding-right: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.article button {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: #333;
+    border-style:dashed;
+    border-color: white;
+    border-radius: 10px;
+    padding: 0.5%;
+    margin-bottom: 3%;
+}
+
+@media (max-width: 768px) {
+    .image-and-article {
+        flex-direction: column; 
+    }
+
+    .image,
+    .article h2, p {
+        flex-basis: 100%; 
+        text-align: center;
+
+    }
+
+    .article {
+        padding-left: 5%; 
+        margin-top: 5%; 
+        font-size: 14px;
+    }
+}
+
+/*FORMULARIO*/
+h6, h2 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h6 {
+    padding-top: 10px;
+}
+
+.orador {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.formulario {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.col {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 5%;
+}
+
+
+/* FOOTER */
+footer {
+    background: linear-gradient(#043569, #033e7c);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center; 
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 10;
+}
+
+li {
+    display:inline-flex;
+    margin-right: 60px;
+    margin-bottom: 10px; 
+}
+
+/* Estilos para los enlaces */
+li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+li:last-child {
+    margin-right: 0;
+}
+
+/* Estilos responsivos para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+    li {
+        display: block; 
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* TICKETS STYLE */
+.venta {
+    color: rgb(71, 71, 71);
+    margin-top: 3%;
+}
+
+.valorTicket {
+    text-align: center;
+    color: black;
+}
+
+.tituloCard {
+    text-align: center;
+}
+
+.documentacion {
+    text-align: center;
+}
+
+#discount p {
+    text-align: center;
+}
+
+#discount .tituloCard {
+    text-align: center;
+    font-weight: bold;
+}
+
+#totalPagar {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    background-color: #b3bdeb;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#email {
+    margin-bottom: 8px;
+}
+
+#formButton {
+    margin-bottom: 10px;
+}
